@@ -32,10 +32,7 @@ hist = s.char_histogram()
 
 ## Requirements
 Python 3.x
-    Python 3.x
 
-    No external dependencies
 
-License
-
+## License
 MIT License
