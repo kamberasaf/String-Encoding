@@ -1,13 +1,9 @@
 
 class String(str):
     def __new__(cls, str1: str, rules=None):
-        return str.__new__(cls, str1)
-
-    def __init__(self, str1: str, rules=None):
-        if rules is None:
-            self.rules = []
-        else:
-            self.rules = rules
+        obj = super().__new__(cls, str1)
+        obj.rules = rules if rules is not None else []
+        return obj
 
     def __add__(self, other):
         return String(str.__add__(self ,other))
